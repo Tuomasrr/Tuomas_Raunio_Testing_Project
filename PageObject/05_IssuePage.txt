@@ -6,9 +6,9 @@ Documentation	Issue Test scenario. CRUD Operation: Create, Read, Update, Delete
 
 # TODO: Write Precondition and Postcondition, Tags 
 
-Pre Condition	Tips: Project must be created by the user before 
-Post Condition	
-Tags
+Pre Condition	Open Browser, Login To GitLab And Create New Project If There Isn't One Already 	Tips: Project must be created by the user before 
+Post Condition	Close Browser
+Tags	Issue, TS-5-Issue
 
 #******************* Common Variables ********************
 
@@ -18,6 +18,11 @@ Tags
 # NOTE: Please Remove your login credential before uploading Assignments
 
 # TODO: Write Issue creation field variables, Updated name of the issue
+
+ProjectsPageUrl= https://gitlab.com/tuomasrr-group/my-project
+IssuePageUrl= https://gitlab.com/tuomasrr-group/my-project/-/issues 
+IssueTitle1= First issue
+IssueTitleUpdated= First issue updated
 
 
 
@@ -29,7 +34,33 @@ Tags
 
 # Positive Test examples are below write test process steps for each below test case
 
-	Create issue,
- 	Update name of issue, 
+	Create issue
+		Navigate To Project Page	ProjectsPageUrl
+		Select My Project
+		Click New Item
+		Input Issue Title	IssueTitle1
+		Create Descpription		"This is my first issue"
+		Submit Issue
+		Verify Page Should Contain	Issue created.
+
+ 	Update name of issue
+		Navigate To Issue Page		IssuePageUrl
+		Select First issue
+		Click Edit
+		Input Updated Issue Title		IssueTitleUpdated
+		Click Save Changes
+		Verify Page Should Contain	Tuomas_R changed title from First issue to First issue updated just now
+
 	Create second issue with privious updated name
+		Navigate To Issue Page		IssuePageUrl
+		Click New Item
+		Input Issue Title	IssueTitleUpdated
+		Submit Issue
+		Verify Page Should Contain	Issue created.
+
     Delete first issue
+		Navigate To Issue Page		IssuePageUrl
+		Select Issue That Was Created First
+		Click Close Issue
+		Verify Page Should Contain	First issue disappeared and second issue still visible.
+
