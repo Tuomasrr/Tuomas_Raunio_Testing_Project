@@ -25,7 +25,7 @@ Correct the text string in project creation page template
 Replace the incorrect word "black" with "blank"
 Maybe add automated test that check for right labels.
 Simple possible solution as line of code:
-"<button>Create black project</button> -> <button>Create blank project</button>"
+<button>Create black project</button> -> <button>Create blank project</button>
 
 ## Whom do you report/ Assign To/ Tags
 Report to: UI Team
