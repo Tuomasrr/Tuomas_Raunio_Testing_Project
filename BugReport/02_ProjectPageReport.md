@@ -31,6 +31,6 @@ Assign to: Frontend Dev
 Tags: GitLab, UI, Typo, Project Page, Create Project
 
 ## Priority
-Medium
+Minor
 As it does not effect on functionality, but may create confusion because the typo.
       
