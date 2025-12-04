@@ -80,9 +80,8 @@ Empty=
 		Input Password		Empty
 		Accept Terms And Conditions
 		Submit Registration Form
-		Verify Page Should Contain	Must be between 8-128 characters. Cannot use common phrases (e.g./
-									 "password". Cannot inlcude your name, username, or email)
-	
+		Verify Page Should Contain	Must be between 8-128 characters. Cannot use common phrases (e.g./"password". Cannot inlcude your name, username, or email)
+							 
 	Register user with invalid email
 		Navigate To Registration Page  LoginUrl
 		Input First Name	Valid_FirstName
